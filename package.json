@@ -41,17 +41,17 @@
     "y-websocket": "^2.1.0",
     "yjs": "^13.6.24",
     "zod": "^3.24.2",
-    "tsx": "^4.19.3"
-  },
-  "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
+    "tsx": "^4.19.3",
+    "prisma": "^6.6.0",
+    "typescript": "^5.8.3",
     "@types/node": "^22.14.1",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "@types/ws": "^8.18.1",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/ws": "^8.18.1"
+  },
+  "devDependencies": {
     "cross-env": "^7.0.3",
-    "prisma": "^6.6.0",
-    "typescript": "^5.8.3",
     "vitest": "^3.2.7"
   }
 }

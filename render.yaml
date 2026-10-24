@@ -11,7 +11,7 @@ services:
     runtime: node
     plan: free
     region: oregon
-    buildCommand: npm install && npx prisma generate && npx prisma migrate deploy && npm run build
+    buildCommand: npm install --include=dev && npx prisma generate && npx prisma migrate deploy && npm run build
     startCommand: npm run start
     healthCheckPath: /api/auth/providers
     envVars:
@@ -39,7 +39,7 @@ services:
     runtime: node
     plan: free
     region: oregon
-    buildCommand: npm install && npx prisma generate
+    buildCommand: npm install --include=dev && npx prisma generate
     startCommand: npm run start:collab
     healthCheckPath: /
     envVars:

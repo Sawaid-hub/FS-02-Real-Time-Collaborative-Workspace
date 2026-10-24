@@ -78,7 +78,7 @@ If you prefer to configure the services manually in the Render dashboard:
    - **Runtime**: `Node`.
    - **Build Command**:
      ```bash
-     npm install && npx prisma generate
+     npm install --include=dev && npx prisma generate
      ```
    - **Start Command**:
      ```bash
@@ -109,7 +109,7 @@ If you prefer to configure the services manually in the Render dashboard:
    - **Runtime**: `Node`.
    - **Build Command**:
      ```bash
-     npm install && npx prisma generate && npx prisma migrate deploy && npm run build
+     npm install --include=dev && npx prisma generate && npx prisma migrate deploy && npm run build
      ```
    - **Start Command**:
      ```bash
