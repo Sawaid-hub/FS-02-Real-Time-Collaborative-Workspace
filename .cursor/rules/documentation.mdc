@@ -1,0 +1,19 @@
+---
+description: Documentation structure, voice, and update rules
+globs: "**/*.{md,mdc}"
+alwaysApply: false
+---
+
+# Documentation
+
+Write for a reviewer who has never opened the repo.
+
+- Active voice, short sentences, current truth only. Remove stale “later” plans after shipping.
+- `README.md`: setup, scripts, env, two-client run.
+- `Overview.md`: scope and acceptance criteria.
+- `RULES.md`: standards. `AGENTS.md`: contributor workflow.
+- `Memory.md`: decisions, open questions, progress. No secrets or private user content.
+- `docs/`: architecture, API, data, room names, snapshot format, test evidence.
+- Update docs in the same change as setup or contract changes.
+- State what Redis/multi-instance tests actually proved. No unmeasured scale claims.
+- Define workspace, page, role, room, snapshot, and awareness on first use.

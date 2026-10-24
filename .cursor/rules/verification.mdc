@@ -1,0 +1,12 @@
+---
+description: Required tests before marking collaboration or permissions done
+alwaysApply: true
+---
+
+# Verification
+
+Do not mark collaboration or permissions complete from one browser.
+
+Must observe: sign-in and reload persistence; two sessions converging; reconnect resync; presence avatars/cursors; view/comment/edit on HTTP and WebSocket; comments and snapshots; Redis multi-instance or a documented tested limitation.
+
+Record what ran and any numbers. If a test was skipped, say so. Label mocks. No unmeasured scale claims.

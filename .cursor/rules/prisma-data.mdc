@@ -1,0 +1,15 @@
+---
+description: Prisma schema, migrations, and data-model rules
+globs: "prisma/**/*.{prisma,sql,ts}"
+alwaysApply: false
+---
+
+# Data and Prisma
+
+- Source of truth is PostgreSQL via Prisma. Do not add a second ORM.
+- Required concepts: User, Workspace, Membership, Page, Comment, Snapshot.
+- Membership roles: `view` | `comment` | `edit` (owner allowed if needed). Same enum in schema, API, and UI.
+- Comments: author, page, timestamp, body, document anchor.
+- Snapshots: author, timestamp, content or Yjs update reference; document encoding in `docs/`.
+- Migrations for every schema change. Do not rewrite applied migrations.
+- Index foreign keys and room-auth lookups (`userId`, `workspaceId`, `pageId`).

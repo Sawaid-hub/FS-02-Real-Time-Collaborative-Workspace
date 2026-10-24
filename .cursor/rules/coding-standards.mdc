@@ -1,0 +1,23 @@
+---
+description: TypeScript, Next.js, and React coding standards
+globs: "{app,components,lib,src}/**/*.{ts,tsx,js,jsx}"
+alwaysApply: false
+---
+
+# Coding standards
+
+- TypeScript only in app code. No `any`; narrow `unknown`.
+- `'use client'` only for browser/Yjs/interactive UI.
+- Functional components. Collaboration (Y.Doc, provider, awareness) lives in hooks or `lib/collab`, not presentational components.
+- Permission helpers: `canView`, `canComment`, `canEdit`. Use them in routes and UI.
+- Handle errors at route and WebSocket boundaries. No empty `catch`.
+- Do not log tokens or private document text.
+- Disable the editor for `view` and `comment` roles; comments allowed for `comment` and `edit`.
+
+```ts
+// ❌ BAD
+await prisma.page.update({ where: { id }, data: { contentHtml: html } });
+
+// ✅ GOOD
+await persistYjsUpdate({ pageId: id, update, userId });
+```

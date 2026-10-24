@@ -1,0 +1,26 @@
+---
+description: Yjs, WebSocket, presence, and Redis collaboration rules
+globs: "{app,components,lib,src,server}/**/*.{ts,tsx,js,jsx}"
+alwaysApply: false
+---
+
+# Collaboration
+
+- One room-name helper; document the pattern (e.g. `page:{pageId}`).
+- Authenticate and authorize before applying Yjs updates.
+  - `view`: receive updates
+  - `comment`: receive updates; comment APIs only
+  - `edit`: receive and send Yjs updates
+- Presence uses Yjs awareness (avatars, cursor colors).
+- Persist updates/snapshots explicitly; document reconnect behavior.
+- Redis is for multi-instance pub/sub or equivalent coordination, not page permissions.
+- Prove two-browser convergence, reload, and reconnect before UI polish.
+
+```ts
+// ❌ BAD
+joinRoom(req.query.room);
+
+// ✅ GOOD
+const access = await authorizePageRoom({ userId, pageId });
+if (!access.canView) return rejectUnauthorized();
+```

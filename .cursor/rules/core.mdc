@@ -1,0 +1,20 @@
+---
+description: Core MVP, architecture, and workflow rules for FS-02
+alwaysApply: true
+---
+
+# Core project rules
+
+Follow [RULES.md](RULES.md). Keep the MVP in [Overview.md](Overview.md).
+
+- Yjs shared state for concurrent editing. Never last-write-wins HTTP document saves.
+- Separate auth, persistence, collab transport, permissions, and editor UI.
+- Authorize HTTP routes and WebSocket rooms. Room name access is not permission.
+- Roles: `view`, `comment`, `edit`. Viewers cannot edit; commenters cannot edit content.
+- Redis coordinates multiple collab instances; PostgreSQL/Prisma is the source of truth for users, pages, and roles.
+- No canvas, billing, or enterprise admin in the MVP.
+- Do not claim scale or convergence without recorded tests.
+- Never commit secrets. Placeholders only in `.env.example`.
+- Small focused changes. Update docs when contracts or setup change.
+- Record decisions and open questions in `Memory.md`.
+- Start every session by reading `Memory.md`. Before the first command and after every completed command/task, update its progress log. No secrets.

@@ -1,0 +1,17 @@
+import { NextResponse } from "next/server";
+
+const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="#181818"/>
+  <rect x="1" y="1" width="30" height="30" rx="7" stroke="#333333" stroke-width="1.5"/>
+  <path d="M8 8.5C8 7.67157 8.67157 7 9.5 7H14.5L20 16.5V8.5C20 7.67157 20.6716 7 21.5 7H23C23.8284 7 24.5 7.67157 24.5 8.5V23.5C24.5 24.3284 23.8284 25 23 25H18L12.5 15.5V23.5C12.5 24.3284 11.8284 25 11 25H9.5C8.67157 25 8 24.3284 8 23.5V8.5Z" fill="#2383e2"/>
+  <circle cx="23.5" cy="8.5" r="2.5" fill="#38bdf8"/>
+</svg>`;
+
+export async function GET() {
+  return new NextResponse(ICON_SVG, {
+    headers: {
+      "Content-Type": "image/svg+xml",
+      "Cache-Control": "public, max-age=86400",
+    },
+  });
+}

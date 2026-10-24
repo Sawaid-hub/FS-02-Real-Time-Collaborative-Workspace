@@ -1,0 +1,12 @@
+---
+description: Update Memory.md at session start and after every command
+alwaysApply: true
+---
+
+# Memory.md always
+
+- Read [Memory.md](Memory.md) before other work in every session.
+- Before the first command, append missing prior work to the progress log.
+- After every completed command or task, append a dated bullet: what ran, what changed, what broke, what is next.
+- Do not start the next task until Memory.md is current.
+- Never store secrets, tokens, or private user/document text.
