@@ -526,6 +526,11 @@ textarea::placeholder {
   color: var(--ink);
 }
 
+/* The editor sheet is white in the dark theme, so document text must stay dark. */
+.editor-frame .ProseMirror {
+  color: #1f2937;
+}
+
 .ProseMirror p {
   margin: 0.75em 0;
 }

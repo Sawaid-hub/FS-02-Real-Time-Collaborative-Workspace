@@ -94,7 +94,7 @@ export function CollaborativeEditor({
           ? [
               CollaborationCursor.configure({
                 provider,
-                user: { name: userName, color },
+                user: { id: userId, name: userName, color },
               }),
             ]
           : []),

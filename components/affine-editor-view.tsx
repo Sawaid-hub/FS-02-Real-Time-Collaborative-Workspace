@@ -112,7 +112,7 @@ export function AffineEditorView({
           ? [
               CollaborationCursor.configure({
                 provider,
-                user: { name: userName, color },
+                user: { id: userId, name: userName, color },
               }),
             ]
           : []),
