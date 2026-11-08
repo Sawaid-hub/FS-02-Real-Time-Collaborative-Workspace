@@ -2,7 +2,7 @@
 
 ## Overview
 
-FS-02 is an enterprise-grade real-time collaborative workspace blending the linear document power of **Notion** and the multi-mode aesthetic of **AFFiNE** (`https://app.affine.pro`). It unites real-time collaborative document editing with structured project lifecycle tracking, Kanban task management, and file attachment storage.
+FS-02 is a capstone-scale collaborative workspace inspired by Notion and AFFiNE. It combines real-time text editing with workspace permissions, project/task tracking, and file attachments. The project is a demo pilot; no production-scale performance claim is made.
 
 ---
 
