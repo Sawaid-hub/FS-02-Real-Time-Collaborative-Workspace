@@ -173,7 +173,7 @@ export default function RegisterPage() {
                 type="email"
                 required
                 autoComplete="email"
-                placeholder="alice@example.com"
+                placeholder="you@example.com"
                 style={{
                   padding: "10px 14px",
                   borderRadius: 8,

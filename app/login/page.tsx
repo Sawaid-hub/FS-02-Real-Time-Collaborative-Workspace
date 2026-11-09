@@ -31,12 +31,6 @@ export default function LoginPage() {
     router.refresh();
   }
 
-  function fillDemo(demoEmail: string, demoPass: string) {
-    setEmail(demoEmail);
-    setPassword(demoPass);
-    setError("");
-  }
-
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "var(--affine-canvas-bg, #f8fafc)" }}>
       {/* Top Header */}
@@ -133,57 +127,6 @@ export default function LoginPage() {
             <p style={{ margin: 0, color: "var(--affine-muted, #64748b)", fontSize: "0.92rem" }}>
               Sign in to collaborate on documents, tasks, and projects.
             </p>
-          </div>
-
-          {/* Demo Login Quick Selectors */}
-          <div
-            style={{
-              padding: "12px 14px",
-              borderRadius: "var(--radius-md, 10px)",
-              background: "var(--affine-border-subtle, #f1f5f9)",
-              border: "1px solid var(--affine-border, #e2e8f0)",
-              marginBottom: 20,
-            }}
-          >
-            <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--affine-muted, #64748b)", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 8 }}>
-              ⚡ Quick Demo Logins
-            </div>
-            <div style={{ display: "flex", gap: 8 }}>
-              <button
-                type="button"
-                onClick={() => fillDemo("alice@example.com", "password123")}
-                style={{
-                  flex: 1,
-                  padding: "6px 10px",
-                  fontSize: "0.78rem",
-                  fontWeight: 600,
-                  borderRadius: 6,
-                  border: "1px solid var(--affine-border, #cbd5e1)",
-                  background: "var(--affine-card-bg, #ffffff)",
-                  color: "var(--affine-ink, #0f172a)",
-                  cursor: "pointer",
-                }}
-              >
-                👑 Alice (Owner)
-              </button>
-              <button
-                type="button"
-                onClick={() => fillDemo("bob@example.com", "password123")}
-                style={{
-                  flex: 1,
-                  padding: "6px 10px",
-                  fontSize: "0.78rem",
-                  fontWeight: 600,
-                  borderRadius: 6,
-                  border: "1px solid var(--affine-border, #cbd5e1)",
-                  background: "var(--affine-card-bg, #ffffff)",
-                  color: "var(--affine-ink, #0f172a)",
-                  cursor: "pointer",
-                }}
-              >
-                👤 Bob (Editor)
-              </button>
-            </div>
           </div>
 
           <form className="grid" onSubmit={onSubmit} style={{ gap: 16 }}>
